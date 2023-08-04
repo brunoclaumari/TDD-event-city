@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.devsuperior.bds02.dto.EventDTO;
+
 @Entity
 @Table(name = "tb_event")
 public class Event {
@@ -35,6 +37,7 @@ public class Event {
 		this.url = url;
 		this.city = city;
 	}
+
 
 	public Long getId() {
 		return id;
@@ -75,4 +78,11 @@ public class Event {
 	public void setCity(City city) {
 		this.city = city;
 	}
+
+	@Override
+	public String toString() {
+		return "Event [id=" + id + ", name=" + name + ", date=" + date + ", url=" + url + "]";
+	}
+	
+	
 }
